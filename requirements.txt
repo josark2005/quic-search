@@ -1,0 +1,5 @@
+urllib3
+pywin32
+pyperclip
+system_hotkey
+playsound
