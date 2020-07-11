@@ -6,13 +6,28 @@ A python quick search programme for special databases
 
 **需要使用剪贴板（复制粘贴）时，请切换回搜索模式，相同的搜索项只会触发1次搜索，程序读取剪贴板的频率默认为2秒1次**
 
-## 数据库示例
+## 自建数据库示例
 
 [jokin1999/quic-search-demo](https://github.com/jokin1999/quic-search-demo)
 
+**需要官方收录数据库节点请提交[ISSUE](https://github.com/jokin1999/quic-search-demo/issues/new)，会尽快处理。**
+
 ## 快捷键
 
-`Ctrl + Shift + Alt + Z` 切换剪贴板模式与搜索模式
+- `Ctrl + Shift + Alt + Z` 切换搜索模式、剪贴板模式、英译中、中译英（具体请参考软件提示）
+- `Ctrl + Shift + Alt + S` 发送剪贴板内容至云便签
+- `Ctrl + Shift + Alt + X` 获取云便签内容并复制到剪贴板
+
+**所有快捷键操作与`CTRL+C`、复制操作均有提示音**
+
+## 提示音说明
+
+软件打开后会释放以`x.mp3`命名的提示音文件，提前试听可帮助熟悉软件
+
+- `0.mp3` 通常表示错误或搜索模式
+- `1.mp3` 通常表示成功或剪贴板模式
+- `2.mp3` 通常表示英译中模式
+- `3.mp3` 通常表示中译英模式
 
 ## 白名单格式说明
 
@@ -36,6 +51,8 @@ key2
 ```
 
 ## 数据库格式说明
+
+**数据库尽可能保持下方格式，多行Answer不可换行，不要出现多余的非空白行，`#`开头的行或空白行会被忽略。**
 
 文件：`databases/xxx.qcsd`
 

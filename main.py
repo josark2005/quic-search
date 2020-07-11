@@ -59,6 +59,8 @@ def select_node():
     global QCS
     global TSLTAPI_APPID
     global TSLTAPI_KEY
+    global NOTE
+    global NOTE_NODE
     print("=================================================")
     print("|| Select Central Node                         ||")
     print("|| 0: Github                                   ||")
@@ -105,8 +107,10 @@ def select_node():
         print("!! 读取节点数据失败（code:2）")
         exit()
     _config = json.loads(_config.data.decode('UTF-8'))
-    TSLTAPI_APPID = _config['TSLTAPI_APPID']
-    TSLTAPI_KEY = _config['TSLTAPI_KEY']
+    TSLTAPI_APPID = _config['TSLTAPI_APPID'] if 'TSLTAPI_APPID' in _config else ''
+    TSLTAPI_KEY = _config['TSLTAPI_KEY'] if 'TSLTAPI_KEY' in _config else ''
+    NOTE = _config['NOTE_LINK'] if 'NOTE_LINK' in _config else ''
+    NOTE_NODE = _config['NOTE_NODE'] if 'NOTE_NODE' in _config else ''
 
 
 # 选择模式
@@ -418,7 +422,7 @@ def main() :
     print("=================================================")
     print("||                 QUIC SEARCH                 ||")
     print("||                Author: Jokin                ||")
-    print("||               Version: v1.3.0               ||")
+    print("||               Version: v1.3.1               ||")
     print("=================================================")
     # 写音效文件
     if (os.path.exists('./0.mp3') == False):
